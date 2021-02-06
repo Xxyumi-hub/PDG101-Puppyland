@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Welcome to Puppyland</title>
+        <meta charset='UTF-8'/>
+        <meta name="description" content="A simple HTML, CSS, JS page showing the small town of Uiryeong, South Korea">
+        <style>
+            body {
+                background-image: url("https://d17fnq9dkz9hgj.cloudfront.net/uploads/2020/04/shelter-dog-cropped-1.jpg");
+                background-size: cover;
+                color: black;
+                text-shadow:
+                -.5px -.5px 0 rgb(255, 255, 255),
+                .5px -.5px 0 rgb(255, 255, 255),
+                -.5px .5px 0 rgb(255, 255, 255),
+                .5px .5px 0 #000; 
+            }
+            h1 {
+                text-align: right;
+            }
+            img[src] {
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                width: 30%;
+            }
+            table, tr, td, caption {
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0.2em;
+                font-size: 1.1em;
+                }
+          
+            caption {
+                font-size: 1.8em;
+            }
+            p {
+                text-align: left;
+                font-size: 1.2em;
+            }
+            ol, ul {
+                text-align: left;
+                list-style-position: inside;
+            }
+            
+            .form {
+                text-align: center;
+
+            }
+            input[type=submit] {
+                margin: 3%;
+                border-radius: 55px;
+                padding: 1%;
+            }
+            .first-name {
+                padding: 1.2em;
+            }
+            .para-center{
+                text-align: center;
+            }
+            .list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["lname"].value;
+                if (x == "") {
+                    alert("last name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to Puppyland!</h1>
+        <hr>
+        <img src="https://www.cesarsway.com/wp-content/uploads/2015/06/puppy-checklist.png" alt="A picture of a traditional korean building">
+        <table>
+            <caption>Hotspots in Puppyland</caption>
+            <tr>
+                <td>Cats</td>
+                <td>dogs</td>
+                <td>birds</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <p class="para-center">Bulletpoints below:</p>
+        <div class="list">
+            <ul>
+                <li>These</li>
+                <li>are</li>
+                <li>all</li>
+                <li>bullet</li>
+                <li>points</li>
+            </ul>
+        </div>
+        <p class="para-center">I'd love to know who you are! Please enter the below:</p>
+        <div class="form">
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                   <div class="first-name">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required><br>
+                    </div>
+                    <div class="last-name">
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"> <br>
+                    </div>
+                    <input type="submit" value="Send">
+            </form>
+        </div>  
+        <footer><p class="para-center">You can reach me <a href="mailto:jwilkes1@student.egcc.edu">here!</a></p></footer>
+    </body>
+</html>
